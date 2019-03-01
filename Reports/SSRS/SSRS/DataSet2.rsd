@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText> SELECT NON EMPTY { [Measures].[Total], [Measures].[Transaction History Count] } ON COLUMNS, NON EMPTY { ([Transaction History].[First Name].[First Name].ALLMEMBERS * [Transaction History].[Last Name].[Last Name].ALLMEMBERS * [Transaction History].[Type].[Type].ALLMEMBERS * [Transaction History].[Id].[Id].ALLMEMBERS * [User Account].[Id].[Id].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cube] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Transaction History</DimensionName>
+                    <HierarchyName>First Name</HierarchyName>
+                    <HierarchyUniqueName>[Transaction History].[First Name]</HierarchyUniqueName>
+                    <LevelName>First Name</LevelName>
+                    <UniqueName>[Transaction History].[First Name].[First Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>First Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Transaction History</DimensionName>
+                    <HierarchyName>Last Name</HierarchyName>
+                    <HierarchyUniqueName>[Transaction History].[Last Name]</HierarchyUniqueName>
+                    <LevelName>Last Name</LevelName>
+                    <UniqueName>[Transaction History].[Last Name].[Last Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Last Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Transaction History</DimensionName>
+                    <HierarchyName>Type</HierarchyName>
+                    <HierarchyUniqueName>[Transaction History].[Type]</HierarchyUniqueName>
+                    <LevelName>Type</LevelName>
+                    <UniqueName>[Transaction History].[Type].[Type]</UniqueName>
+                  </ID>
+                  <ItemCaption>Type</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Transaction History</DimensionName>
+                    <HierarchyName>Id</HierarchyName>
+                    <HierarchyUniqueName>[Transaction History].[Id]</HierarchyUniqueName>
+                    <LevelName>Id</LevelName>
+                    <UniqueName>[Transaction History].[Id].[Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>User Account</DimensionName>
+                    <HierarchyName>Id</HierarchyName>
+                    <HierarchyUniqueName>[User Account].[Id]</HierarchyUniqueName>
+                    <LevelName>Id</LevelName>
+                    <UniqueName>[User Account].[Id].[Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Total</MeasureName>
+                    <UniqueName>[Measures].[Total]</UniqueName>
+                  </ID>
+                  <ItemCaption>Total</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Transaction History Count</MeasureName>
+                    <UniqueName>[Measures].[Transaction History Count]</UniqueName>
+                  </ID>
+                  <ItemCaption>Transaction History Count</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Cube</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement> SELECT NON EMPTY { [Measures].[Total], [Measures].[Transaction History Count] } ON COLUMNS, NON EMPTY { ([Transaction History].[First Name].[First Name].ALLMEMBERS * [Transaction History].[Last Name].[Last Name].ALLMEMBERS * [Transaction History].[Type].[Type].ALLMEMBERS * [Transaction History].[Id].[Id].ALLMEMBERS * [User Account].[Id].[Id].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cube] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="First_Name">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Transaction History].[First Name].[First Name]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Last_Name">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Transaction History].[Last Name].[Last Name]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Type">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Transaction History].[Type].[Type]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Id">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Transaction History].[Id].[Id]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Id2">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[User Account].[Id].[Id]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Total">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Total]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Transaction_History_Count">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Transaction History Count]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet3">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText> SELECT NON EMPTY { [Measures].[Ante], [Measures].[Bets History Count] } ON COLUMNS, NON EMPTY { ([Date].[Date Value].[Date Value].ALLMEMBERS * [User Account].[Id].[Id].ALLMEMBERS * [User Account].[First Name].[First Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cube] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>MDX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Date</DimensionName>
+                    <HierarchyName>Date Value</HierarchyName>
+                    <HierarchyUniqueName>[Date].[Date Value]</HierarchyUniqueName>
+                    <LevelName>Date Value</LevelName>
+                    <UniqueName>[Date].[Date Value].[Date Value]</UniqueName>
+                  </ID>
+                  <ItemCaption>Date Value</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>User Account</DimensionName>
+                    <HierarchyName>Id</HierarchyName>
+                    <HierarchyUniqueName>[User Account].[Id]</HierarchyUniqueName>
+                    <LevelName>Id</LevelName>
+                    <UniqueName>[User Account].[Id].[Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>User Account</DimensionName>
+                    <HierarchyName>First Name</HierarchyName>
+                    <HierarchyUniqueName>[User Account].[First Name]</HierarchyUniqueName>
+                    <LevelName>First Name</LevelName>
+                    <UniqueName>[User Account].[First Name].[First Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>First Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Ante</MeasureName>
+                    <UniqueName>[Measures].[Ante]</UniqueName>
+                  </ID>
+                  <ItemCaption>Ante</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+                <Item>
+                  <ID xsi:type="Measure">
+                    <MeasureName>Bets History Count</MeasureName>
+                    <UniqueName>[Measures].[Bets History Count]</UniqueName>
+                  </ID>
+                  <ItemCaption>Bets History Count</ItemCaption>
+                  <BackColor>true</BackColor>
+                  <ForeColor>true</ForeColor>
+                  <FontFamily>true</FontFamily>
+                  <FontSize>true</FontSize>
+                  <FontWeight>true</FontWeight>
+                  <FontStyle>true</FontStyle>
+                  <FontDecoration>true</FontDecoration>
+                  <FormattedValue>true</FormattedValue>
+                  <FormatString>true</FormatString>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Cube</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement> SELECT NON EMPTY { [Measures].[Ante], [Measures].[Bets History Count] } ON COLUMNS, NON EMPTY { ([Date].[Date Value].[Date Value].ALLMEMBERS * [User Account].[Id].[Id].ALLMEMBERS * [User Account].[First Name].[First Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cube] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Date_Value">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Date].[Date Value].[Date Value]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Id">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[User Account].[Id].[Id]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="First_Name">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[User Account].[First Name].[First Name]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Ante">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Ante]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Bets_History_Count">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Bets History Count]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

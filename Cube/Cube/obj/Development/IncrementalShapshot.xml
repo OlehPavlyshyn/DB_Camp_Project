@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>Cube</Database>
+    <Server>DESKTOP-JHT4S4S\OLEH_PAVLYSHYN</Server>
+    <ConnectionString>Data Source=DESKTOP-JHT4S4S\OLEH_PAVLYSHYN;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>bEkGZx8zYkxfH1R/AF5F+kYVeik=27.02.2019 18:07:0013.02.2019 16:25:12</TimeStamp>
+        <ID>
+          <String>Project DWH2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>wetf9tCmxwNVv6e2CRIpaV7gWYk=27.02.2019 22:25:2027.02.2019 21:26:49</TimeStamp>
+        <ID>
+          <String>Project DWH2</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7iPMKl8WSAL/8IraFEGFgKQyz2Q=27.02.2019 17:03:3013.02.2019 16:59:16</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>QbYsXZK33gRIYw1onZOc/vdtEU4=27.02.2019 17:36:0227.02.2019 17:35:24</TimeStamp>
+        <ID>
+          <String>Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>nna+G9mHU4OSt3YrnUpP3wbXeK4=27.02.2019 22:37:2127.02.2019 22:36:40</TimeStamp>
+        <ID>
+          <String>User Account</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8JmVVhZykJbdHaUensK2lmkH9og=27.02.2019 23:13:5527.02.2019 22:40:45</TimeStamp>
+        <ID>
+          <String>Bets History</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>5Q6ktbQZGdzQkFgsb1F+XmmwkY0=27.02.2019 23:15:5927.02.2019 23:13:55</TimeStamp>
+        <ID>
+          <String>Transaction History</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>sMUp9MKVMNTFO14YtwXEWLcJkh0=27.02.2019 23:22:4227.02.2019 23:20:01Do+Yv3VbD0oRNnotiVLweex0phQ=27.02.2019 23:20:0127.02.2019 23:20:01</TimeStamp>
+        <ID>
+          <String>Project DWH2 1</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>FOtQb7Cugz34gPBBBT75fFOhE1c=13.02.2019 16:22:2913.02.2019 16:22:26</TimeStamp>
+      <ID>
+        <String>Cube</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-02-28T10:38:07.163333Z</LastDeployed>
+</DeploymentSnapshot>
